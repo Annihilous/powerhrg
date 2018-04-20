@@ -15,6 +15,9 @@
       - if current_user && current_user.is_admin
         = link_to admin_dashboard_path, class: 'nav-link' do
           Admin Dashboard
+      - if current_user.present?
+        = link_to events_path, class: 'nav-link' do
+          Events
     %ul.navbar-nav.navbar-right
       - if current_user
         %li.nav-profile-pic
